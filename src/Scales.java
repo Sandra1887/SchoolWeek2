@@ -1,25 +1,38 @@
 class Scales {
-    static double celFah(double c) {
-        return (c * 1.8) + 32;
+
+    static String cel2Fah(double temp) {
+        double celsFahr = (temp * 1.8) + 32;
+        String cf = String.format("Celsius to Fahrenheit: %4.2f", celsFahr);
+        return cf;
     }
 
-    static double celKel(double c) {
-        return c + 273.15;
+    static String cel2Kel(double temp) {
+        double celsKel = temp + 273.15;
+        String ck = String.format("Celsius to Kelvin: %4.2f", celsKel);
+        return ck;
     }
 
-    static double fahKel(double f) {
-        return (f + 459.67) / 1.8;
+    static String fah2Cel(double temp) {
+        double fahrCel = (temp - 32) / 1.8;
+        String fc = String.format("Fahrenheit to Celsius: %4.2f", fahrCel);
+        return fc;
     }
 
-    static double fahCel(double f) {
-        return (f - 32) / 1.8;
+    static String fah2Kel(double temp){
+        double fahrKel = (temp + 459.67) / 1.8;
+        String fk = String.format("Fahrenheit to Kelvin: %4.2f", fahrKel);
+        return fk;
     }
 
-    static double kelCel(double k) {
-        return k - 273.15;
+    static String kel2Cel(double temp) {
+        double kelvCel = temp - 273.15;
+        String kc = String.format("Kelvin to Celsius: %4.2f", kelvCel);
+        return kc;
     }
 
-    static double kelFah(double k) {
-        return (k * 1.8) - 459.67;
+    static String kel2Fah(double temp) {
+        double kelvFah = (temp * 1.8) - 459.67;
+        String kf = String.format("Kelvin to Fahrenheit: %4.2f", kelvFah);
+        return kf;
     }
 }
